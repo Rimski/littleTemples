@@ -1,0 +1,27 @@
+{
+  "name": "littletemples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rimski/littleTemples.git"
+  },
+  "author": "Tanner S.R. Ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rimski/littleTemples/issues"
+  },
+  "homepage": "https://github.com/Rimski/littleTemples#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0"
+  }
+}
