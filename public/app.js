@@ -10,6 +10,10 @@ app.config(function($routeProvider) {
         templateUrl: "./veiws/gallery.html",
         controller: "mainController"
     })
+        .when("/aboutus", {
+        templateUrl: "./veiws/about.html",
+        controller: "mainController"
+    })
         .otherwise({
         templateUrl: "./veiws/home.html",
         controller: "mainController"

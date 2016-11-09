@@ -1,4 +1,4 @@
-var app = angular.modual("MainApp");
+var app = angular.module("MainApp");
 
 app.service("templeService", ["$http", function ($http) {
 
