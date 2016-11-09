@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var Event = new Schema({
     title: String,
     images: Array,
+    description: String,
 })
 
 

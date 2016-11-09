@@ -33,7 +33,7 @@ section.temple1::after {
    left: 0;
    width: 100%;
    height: 100%;
-   opacity: .9;
+   opacity: 1;
    z-index: -1;
    background-image: url(http://cdn.onlyinyourstate.com/wp-content/uploads/2015/08/3042450612_2ebd5bcb9a_o-1-700x560.jpg);
    background-repeat: no-repeat;
@@ -58,7 +58,7 @@ section.temple2::after {
    left: 0;
    width: 100%;
    height: 100%;
-   opacity: .9;
+   opacity: 1;
    z-index: -1;
    background-image: url("../../images/slTemple4.png");
    background-repeat: no-repeat;
@@ -173,9 +173,7 @@ div.info {
     width: 60%;
     text-align: center;
     display: block;
-    z-index: 3;
     background-color: #fff;
-    
 }
 input {
     width: 60%;
