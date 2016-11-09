@@ -6,7 +6,7 @@ var Temple = new Schema({
     
     mainImg: String,
     
-    otherImgs: {type: array}
+    otherImgs: Array,
 })
 
 module.exports = mongoose.model("Temple", Temple);

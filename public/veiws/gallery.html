@@ -1,6 +1,7 @@
 <section class="veiw">
     <h1>gallery</h1>
     <div ng-repeat="item in gallery" class="gallery">
+<!--       maby move title into mainimg-->
         <div class="title"><h1 class="all">{{ item.title }}</h1></div>
         <div class="mainImg"><img ng-src="{{ item.mainImg }}" alt=""></div>
         <div ng-repeat="img in item.otherImgs" class="imgs"><img ng-src="{{ img }}" alt="" class="img"></div>

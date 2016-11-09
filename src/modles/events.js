@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var Event = new Schema({
     title: String,
-    images: {type: array}
+    images: Array,
 })
 
 

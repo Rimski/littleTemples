@@ -14,9 +14,9 @@ app.use(morgan("dev"));
 mongoose.connect(config.database, function() {
 });
 mongoose.connection.on("connected", function () {
-    console.log("conected to database");
+    console.log("conected to database that roo will never get in");
 });
 app.use(express.static(path.join(__dirname, "..", "public")));
 app.listen(port, function() {
-    console.log("Server running on " + port);
+    console.log("Turn down for what? " + port);
 });
