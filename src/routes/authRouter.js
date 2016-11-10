@@ -29,8 +29,8 @@ authRouter.post("/login", function (req, res) {
                     res.send({
                         success: true,
                         token: token,
-                        user: user.withoutPassword(),
-                        message: "Here's your token!"
+                        user: user.noPassword(),
+                        message: "Pota Too"
                     });
                 }
             });
@@ -43,20 +43,27 @@ authRouter.post("/signup", function (req, res) {
         name: req.body.name
     }, function (err, existingUser) {
         if (err) res.status(500).send(err);
-        if (existingUser) res.status(401).send({
+        if (existingUser) res.status(403).send({
             success: false,
             message: "That username is already taken."
         });
         else {
             var newUser = new User(req.body);
-            newUser.save(function (err, user) {
-                if (err) res.status(500).send(err);
-                else res.send({
-                    success: true,
-                    user: user.withoutPassword(),
-                    message: "Successfully created new user"
+            var userPassword = newUser.password;
+            bcrypt.hash(userPassword, 11, function (err, hash) {
+                if (err) throw err;
+                newUser.password = hash;
+                newUser.save(function (err, user) {
+                    if (err) res.status(500).send(err);
+                    else res.send({
+                        success: true,
+                        user: user.noPassword(),
+                        message: "Successfully created new user"
+                    });
                 });
             });
+
+
         }
     });
 });

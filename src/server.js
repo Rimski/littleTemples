@@ -21,14 +21,13 @@ mongoose.connection.on("connected", function () {
 });
 app.use(express.static(path.join(__dirname, "..", "public")));
 //routes
+app.use("/auth", require("./routes/authRouter"));
+app.use("/public", require("./routes/publicRouter"))
 app.use("/api", expressJwt({
     secret: config.secret
 }));
-app.use("/public", require("./routes/publicRouter"))
-app.use("api/auth", require("././routes/authRouter"));
 app.use("api/events", require("./routes/eventRouter"));
 app.use("api/gallery", require("./routes/galleryRouter"));
-//app.use("/api", authRouter)
 app.listen(port, function() {
     console.log("Turn down for what? " + port);
 });

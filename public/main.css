@@ -96,7 +96,7 @@ section.mainVeiw {
     margin-top: 1%;
 }
 body {
-/*    height: 1000px;*/
+    background-image: url(http://thecutestblogontheblock.com/wp-content/uploads/2011/11/muteddamaskstretchcopy1-576x288.jpg);
     margin: 0;
 }
 nav {
@@ -166,14 +166,25 @@ div.form {
     position: fixed;
     top: 70px;
     left: 20%;
-    z-index: -1;
+}
+button.form {
+    font-size: 20px;
+    color: rgba(214, 174, 155, .9);
+    background-color: #FFF7EA;
+    border-radius: 5px;
+}
+button.form:hover {
+    background-color: #ffffff;
+    outline-color: #ffffff;
+}
+button.form:focus {
+    outline-color: rgba(214, 174, 155, 1)
 }
 div.info {
     margin: 0 auto;
     width: 60%;
     text-align: center;
     display: block;
-    background-color: #fff;
 }
 input {
     width: 60%;
@@ -191,6 +202,11 @@ h1.info {
     padding-top: 10px;
 }
 /*contact style*/
+/*gallery style*/
+div.gallery {
+    
+}
+/*gallery style*/
 
 /*footer*/
 footer {

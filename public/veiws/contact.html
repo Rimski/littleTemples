@@ -1,21 +1,28 @@
 <section class="veiw">
     <section class="veiw temple1">
-</section>
+    </section>
     <section class="veiw temple2">
-    
-</section>
+
+    </section>
     <div class="form">
         <div class="input">
-            <h1 class="all">Name</h1>
+            <h1 class="form">Name</h1>
             <input ng-model="bid.name" type="text">
         </div>
         <div class="input">
-            <h1 class="all">You're Email</h1>
+            <h1 class="form">You're Number</h1>
+            <input ng-model="bid.number" type="tel">
+        </div>
+        <div class="input">
+            <h1 class="form">You're Email</h1>
             <input ng-model="bid.email" type="text">
         </div>
         <div class="input">
-            <h1 class="all">Description</h1>
+            <h1 class="form">Description</h1>
             <textarea ng-modle="bid.description" cols="30" rows="5">What temple do you want; additional comments/questions</textarea>
+        </div>
+        <div class="input">
+            <button class="form">Submit</button>
         </div>
     </div>
     <div class="info">

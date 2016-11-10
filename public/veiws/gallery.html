@@ -1,8 +1,35 @@
 <section class="veiw">
     <h1>gallery</h1>
+    <!--   ng-if="$scope.logedIn" -->
+    <div class="form">
+        <div class="input">
+            <h1 class="form">Title</h1>
+            <input ng-model="temple.title" type="text">
+        </div>
+        <div class="input">
+            <h1 class="form">Main Image</h1>
+            <input ng-model="temple.mainImg" type="tel">
+        </div>
+        <div class="input">
+            <h1 class="form">Additinal Images</h1>
+            <input ng-model="image" type="text">
+            <button ng-click="addImg(image)" class="form">Add</button>
+        </div>
+        <div class="input">
+            <button ng-click="addTemples(temple)" class="form">Submit</button>
+        </div>
+        <div class="gallery">
+            <div class="title">
+                <h1 class="all">{{ temple.title }}</h1></div>
+            <div class="mainImg"><img ng-src="{{ temple.mainImg }}" alt=""></div>
+            <div ng-repeat="img in temple.otherImgs" class="imgs"><img ng-src="{{ img }}" alt="" class="img"></div>
+        </div>
+    </div>
+    <!--   -->
     <div ng-repeat="item in gallery" class="gallery">
-<!--       maby move title into mainimg-->
-        <div class="title"><h1 class="all">{{ item.title }}</h1></div>
+        <!--       maby move title into mainimg-->
+        <div class="title">
+            <h1 class="all">{{ item.title }}</h1></div>
         <div class="mainImg"><img ng-src="{{ item.mainImg }}" alt=""></div>
         <div ng-repeat="img in item.otherImgs" class="imgs"><img ng-src="{{ img }}" alt="" class="img"></div>
     </div>

@@ -9,7 +9,7 @@ galleryRouter.route("/")
                 if (err)res.status(418).send({err: err, success: false, message: "Whoops"});
                 else res.send({
                     success: true,
-                    message: "Successfully added event",
+                    message: "Successfully added Temple",
                     event: event
                 });
             });
