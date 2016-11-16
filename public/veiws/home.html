@@ -29,8 +29,8 @@
             </div>
         </div>
         <div class="input">
-            <button ng-click="addEvent(event)" class="form">Submit</button>
-            <button ng-click="finalizeEvent(event)" class="form">Finalize</button>
+            <button ng-hide="edit" ng-click="addEvent(event)" class="form">Submit</button>
+            <button ng-show="edit" ng-click="finalizeEvent(event)" class="form">Finalize</button>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
         <div class="title">
             <h1 class="all">{{ item.title }}</h1></div>
 <!--        <div ng-show="item.imgs.length < 1" class="mainImg"><img class="mainImg" ng-src="{{ item.Images[0] }}" alt=""></div>-->
-        <div  ng-repeat="img in item.images track by $index" class="imgs"><img ng-src="{{ img }}" alt="" class="mainImg"></div>
+        <div ng-init="index=0; classes=['imgs', 'focusImg']" ng-click="index = index + 1" ng-class="classes[index % classes.length]" ng-repeat="img in item.images track by $index" style="background-image: url({{ img }});  background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
         <div class="description">
             <p class="description">{{ item.description }}</p>
         </div>
