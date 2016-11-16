@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body ng-app="MainApp">
-   <nav>
+   <nav ng-controller="authController">
        <a class="nav" href="#/home">HOME</a>
        <a class="nav" href="#/gallery">GALLERY</a>
        <a class="nav" href="#/aboutus">ABOUT US</a>
        <a class="nav" href="#/contact">CONTACT</a>
+       <a ng-show="loggedIn" ng-click="logOut()" href="#/home" class="nav">LOG OUT</a>
    </nav>
     <section class="mainVeiw" ng-view></section>
 <!--

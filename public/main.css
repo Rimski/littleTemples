@@ -123,11 +123,6 @@ a.nav:hover {
 }
 
 
-
-
-
-
-
 /*about us style*/
 section.about {
     background-image: url(https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/1525274_1383993621821239_19204836_n.png?oh=8b06c8758b3836d31938e6f4f5e10f2f&oe=58D2C929);
@@ -180,6 +175,15 @@ button.form:hover {
 button.form:focus {
     outline-color: rgba(214, 174, 155, 1)
 }
+div.form1 {
+    margin: auto;
+    margin-top: 70px;
+    width: 60%;
+    border-radius: 5%;
+    background-color: rgba(214, 174, 155, .3);
+    text-align: center;
+    padding-top: 10px;
+}
 div.info {
     margin: 0 auto;
     width: 60%;
@@ -204,7 +208,37 @@ h1.info {
 /*contact style*/
 /*gallery style*/
 div.gallery {
-    
+    margin: auto;
+    width: 60%;
+    position: static;
+    background-color: rgba(214, 174, 155, .6);
+    border-radius: 5px;
+    text-align: center;
+}
+div.mainImg {
+    width: 100%;
+    margin: 0px;
+    display: inline-block;
+}
+img.mainImg {
+    width: 100%;
+    margin: 0px;
+}
+div.imgs {
+    width: 25%;
+    height: 150px;
+    display: inline-block;
+    margin: 0px; 
+    transition: 2s;
+}
+div.imgs:hover {
+    width: 50%;
+    height: 300px;
+}
+div.focusImg {
+    height: 500px;
+    width: 80%;
+    margin: auto;
 }
 /*gallery style*/
 

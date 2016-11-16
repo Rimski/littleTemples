@@ -1,11 +1,51 @@
-<section class="veiw temple1">
+<section class="veiw">
     <h1>home</h1>
+    <div ng-show="loggedIn" class="form1">
+        <div class="input">
+            <h1 class="form">Title</h1>
+            <input ng-model="event.title" type="text">
+        </div>
+        <div class="input">
+            <h1 class="form"> Images</h1>
+            <input ng-model="eventImg" type="text">
+            <button ng-click="addEventImg(eventImg)" class="form">Add</button>
+        </div>
+        <div class="input">
+            <h1 class="form">Description</h1>
+            <input ng-model="event.description" type="tel">
+        </div>
+        <div class="gallery" ng-show="event">
+            <div class="title">
+                <h1 class="all">{{ event.title }}</h1></div>
+            <div ng-repeat="img in event.images track by $index" class="imgs">
+                <img ng-src="{{ img }}" alt="" class="mainImg">
+                <div class="input">
+                    <button ng-click="deleteImg($index)" class="form">Delete</button>
+                </div>
+            </div>
+<!--            <div ng-show="event.img.lenght === 1" class="mainImg"><img ng-src="{{ event.img[0] }}" alt="" class="mainimg"></div>-->
+            <div class="descriptiion">
+                <p>{{ event.description }}</p>
+            </div>
+        </div>
+        <div class="input">
+            <button ng-click="addEvent(event)" class="form">Submit</button>
+            <button ng-click="finalizeEvent(event)" class="form">Finalize</button>
+        </div>
+    </div>
+
+
+    <div ng-repeat="item in events" class="gallery">
+        <div class="title">
+            <h1 class="all">{{ item.title }}</h1></div>
+<!--        <div ng-show="item.imgs.length < 1" class="mainImg"><img class="mainImg" ng-src="{{ item.Images[0] }}" alt=""></div>-->
+        <div  ng-repeat="img in item.images track by $index" class="imgs"><img ng-src="{{ img }}" alt="" class="mainImg"></div>
+        <div class="description">
+            <p class="description">{{ item.description }}</p>
+        </div>
+        <div ng-show="loggedIn" class="input">
+            <button ng-click="deleteEvent(item)" class="form">Delete</button>
+            <button ng-click="editEvent(item)" class="form">Edit</button>
+        </div>
+    </div>
 </section>
-<section class="veiw temple2">
-    
-</section>
-<!--
-<section class="veiw temple3">
-    
-</section>
--->

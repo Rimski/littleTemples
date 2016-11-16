@@ -26,8 +26,8 @@ app.use("/public", require("./routes/publicRouter"))
 app.use("/api", expressJwt({
     secret: config.secret
 }));
-app.use("api/events", require("./routes/eventRouter"));
-app.use("api/gallery", require("./routes/galleryRouter"));
+app.use("/api/events/", require("./routes/eventRouter"));
+app.use("/api/gallery/", require("./routes/galleryRouter"));
 app.listen(port, function() {
     console.log("Turn down for what? " + port);
 });
